@@ -1,0 +1,2 @@
+class IngSkinAttrsController < ApplicationController
+end
