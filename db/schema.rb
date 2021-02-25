@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_220158) do
     t.string "name"
     t.string "category"
     t.string "brand"
+    t.string "image"
     t.text "description"
     t.string "link"
     t.string "skin_attribute"
@@ -64,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_220158) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+    t.string "image"
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
