@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post "/login", to: "users#login"
+
   resources :ing_skin_attrs
   resources :product_ingredients
   resources :recommendations

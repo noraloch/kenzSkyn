@@ -6,8 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :first_name
       t.string :last_name
-      t.integer :age
-      t.string :preferred_skincare
+      t.string :age
       t.boolean :oily_skin
       t.boolean :dry_skin
       t.boolean :combination_skin

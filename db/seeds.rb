@@ -1,7 +1,7 @@
 puts "seeded";
 #user
-dido = User.create(username: "ACR", password: "123", first_name: "Andrew", last_name: "Rottier", age: "25")
-beibo = User.create(username: "NL", password: "abc", first_name: "Noura", last_name: "Loudani", age: "25")
+dido = User.create(username: "ACR", password: "123", first_name: "Andrew", last_name: "Rottier")
+beibo = User.create(username: "NL", password: "abc", first_name: "Noura", last_name: "Loudani")
 
 #products
 dry_skin_1 = Product.create(name: "XeraCalm A.D Lipid-Replenishing Cleansing Oil",
