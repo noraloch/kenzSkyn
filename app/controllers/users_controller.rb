@@ -21,6 +21,12 @@ class UsersController < ApplicationController
         render json: user
     end
 
+    # def create_image
+    #     image = Cloudinary::Uploader.upload(params[:image])
+    #     user = User.find(params[:id])
+    #     user.update(image: image["url"])
+    #     render json: image
+    # end
 
 
     private
@@ -29,7 +35,6 @@ class UsersController < ApplicationController
             params.require(:user).permit(
                 :username,
                 :password_digest,
-                :image,
                 :first_name,
                 :last_name,
                 :age,

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_one :photo
     has_many :recommendations
     has_many :products, through: :recommendations
     
