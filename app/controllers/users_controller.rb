@@ -2,12 +2,17 @@ class UsersController < ApplicationController
     # before_action :find_user, only: [:update]
 
     # post /login
-    # get the username and password from params 
-    # lookup a user with their password and give us their info
     # return an error message if not valid
     def login
-        #fake auth
-        render json: User.first
+    # get the username and password from params 
+    # lookup a user with their password and give us their info
+        user = User.find_by(username: param[:username])
+        if user && user.authenticate(params[:password])
+        render json: user
+        else
+            render json: {errors: ["Invalid username or password" ]},
+        
+        end
     end
 
     def show 

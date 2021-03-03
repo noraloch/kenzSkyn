@@ -9,6 +9,12 @@ class RecommendationsController < ApplicationController
         render json: recommendation
     end
 
+    def update
+        recommendation = Recommendation.find(params[:id]);
+        recommendation.update(recommendation_params);
+        render json: recommendation
+    end
+
 
     private
 
