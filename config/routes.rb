@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :recommendations
   resources :products
   resources :skin_attributes
-  resources :ingredients, only: [:index]
+  resources :ingredients
   resources :users, only: [:update, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
