@@ -4,6 +4,11 @@ class RecommendationsController < ApplicationController
         render json: recommendations
     end
 
+    def show
+        recommendation = Recommendation.find(params[:id]);
+        render json: recommendation
+    end
+
     def create
         recommendation = Recommendation.create(recommendation_params)
         render json: recommendation
@@ -14,6 +19,12 @@ class RecommendationsController < ApplicationController
         recommendation.update(recommendation_params);
         render json: recommendation
     end
+
+    def destroy
+        recommendation = Recommendation.find(params[:id])
+        recommendation.destroy
+        render json: recommendation 
+    end 
 
 
     private
