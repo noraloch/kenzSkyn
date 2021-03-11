@@ -35,6 +35,21 @@ oily_skin_1 = Product.create(name: "Primally Pure Cleansing Oil",
     link: "https://primallypure.com/products/cleansing-oil-oily-acne-prone-skin?variant=17074829510",
     skin_attribute: "oily_skin")
 
+acne_skin_1 = Product.create(name: "Avène Cleanance Cleansing Gel",
+    category: "Cleanser",
+    brand: "Avène",
+    image: "https://cdn.shopify.com/s/files/1/1347/3383/products/30208-compressor_1024x1024.jpg?v=1594679037",
+    description: "The Avène Cleanance Cleansing Gel is a biodegradable, daily cleanser for face & body, which helps remove impurities & reduce excess oil while respecting sensitive skins delicate balance. Leaves skin feeling refreshed, clear & matte for up to 6 hours without stripping skin. Enhanced with gentle surfactants to help remove make-up, dirt and oil while zinc gluconate soothes so skin isn't left feeling taut.",
+    link: "https://www.ulta.com/cleanance-cleansing-gel?productId=pimprod2021596&sku=2578550&cmpid=PS_Non!google!Product_Listing_Ads&cagpspn=pla&CATCI=aud-981321455006:pla-992875242184&CAAGID=107718646076&CAWELAID=330000200002721472&CATARGETID=330000200002593210&CADevice=c&gclid=Cj0KCQiApsiBBhCKARIsAN8o_4gpQCftsmdk_m5nEIsy0rDwR6sf2Inlt6KoLJTgrDXzJaAsVfYt5-MaAvVjEALw_wcB",
+    skin_attribute: "acne")
+acne_skin_2 = Product.create(name: "DermaControl Oil Control Foam Wash",
+    category: "Cleanser",
+    brand: "Cetaphil",
+    image: "https://imcut.jollychic.com//uploads/jollyimg/imageService/img/goods/2019/05/27/17/50/325e2535-e5ab-46db-aace-6f3e9adb7b3b.jpg",
+    description: "Formulated specifically for acne-prone skin. Clinically proven to remove excess oil and controls shine. Features a calming formula that won't over-dry skin.",
+    link: "https://www.ulta.com/dermacontrol-oil-control-foam-wash?productId=xlsImpprod5140063&sku=2256099&cmpid=PS_Non!google!Product_Listing_Ads&cagpspn=pla&CATCI=aud-981321455166:pla-992875242184&CAAGID=107718646076&CAWELAID=1841138014&CATARGETID=330000200002593210&CADevice=c&gclid=Cj0KCQiApsiBBhCKARIsAN8o_4iiGLRHmbhZqOrIx5fNYa5NjARVp0-sGAr2bAwnyKt2lFl0TPxPE38aAmaAEALw_wcB",
+    skin_attribute: "acne")
+
 #ingredients
 #Dry
 aha = Ingredient.create(name: "AHA: Alphahydroxy Acids", short_description: "Water-soluble acids made from sugary fruits. They help peel away the surface of your skin so that new, more evenly pigmented skin cells may generate and take their place. After use, you’ll likely notice that your skin is smoother to the touch.")
@@ -51,7 +66,7 @@ glycerin = Ingredient.create(name: "glycerin", short_description: "Glycerin is g
 vitamin_E = Ingredient.create(name: "Vitamin E", short_description: "Moisturizes and nourishes your skin. It adds to your glow and makes your skin smooth and health.")
 #Combination Oily Normal
 glycolic_acid = Ingredient.create(name: "glycolic acid", short_description: "It's best for normal, combination, and oily skin types")
-    
+
 #Oily
 retinol = Ingredient.create(name: "retinol", short_description: "Works by increases the speed of your skin cell turnover process to reveal healthier, brighter skin. The downside of Retinol is that it can be irritating for certain skin types but oily skin is generally the best at receiving this potent, powerhouse ingredient.")
 niacinamide = Ingredient.create(name: "niacinamide", short_description: "Also know as Vitamin B3, is a multi-tasking skincare ingredient that hydrates, increases the elasticity of your skin, minimizes pore size, and—of course—regulates excess oil production. Niacinimide can be paired with Hyaluronic Acid to keep your skin moisturized, soft, and shine-free.")
