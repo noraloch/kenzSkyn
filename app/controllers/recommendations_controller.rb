@@ -1,11 +1,12 @@
 class RecommendationsController < ApplicationController
+    
     def index
         recommendations = Recommendation.all
         render json: recommendations
     end
 
     def show
-        recommendation = Recommendation.find(params[:id]);
+        recommendation = Recommendation.find(params[:id])
         render json: recommendation
     end
 

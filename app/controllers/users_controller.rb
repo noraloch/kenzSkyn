@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
   # before_action :find_user, only: [:update]
 
+    def signup
+      @user = User.create(user_params)
+      if @user.valid?
+      render json: @user
+      else
+       render json: {errors: @user.errors.full_messages}
+      end
+    end
+
   # post /login
   def login
     # get the username and password from params
