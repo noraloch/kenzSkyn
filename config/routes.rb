@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   post "/login", to: "users#login"
+  post "/signup", to: "users#signup"
 
   resources :photos, only: [:create, :index]
   resources :ing_skin_attrs
@@ -9,6 +10,6 @@ Rails.application.routes.draw do
   resources :products
   resources :skin_attributes
   resources :ingredients
-  resources :users, only: [:update, :show, :signup]
+  resources :users, only: [:update, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
