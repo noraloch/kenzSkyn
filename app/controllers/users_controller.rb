@@ -2,11 +2,12 @@ class UsersController < ApplicationController
   # before_action :find_user, only: [:update]
 
     def signup
-      @user = User.create(user_params)
-      if @user.valid?
-        render json: @user
+      user = User.create(user_params)
+      if user.valid?
+        token = JWT.encode({user: user.id}, "secret", 'HS256')
+        render json: {user: user, token: token }
       else
-        render json: {errors: @user.errors.full_messages}
+        render json: {errors: user.errors.full_messages}
       end
     end
 
@@ -16,7 +17,8 @@ class UsersController < ApplicationController
     # lookup a user with their password and give us their info
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
-      render json: user
+      token = JWT.encode({user: user.id}, "secret", 'HS256')
+      render json: {user: user, token: token }
     else
     # return an error message if not valid
       render json: { errors: ["Invalid username or password"] }, status: :unauthorized
@@ -44,9 +46,9 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(
+    params.permit(
       :username,
-      :password_digest,
+      :password,
       :first_name,
       :last_name,
       :age,
