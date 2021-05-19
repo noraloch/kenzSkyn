@@ -24,6 +24,13 @@ class UsersController < ApplicationController
       render json: { errors: ["Invalid username or password"] }, status: :unauthorized
     end
   end
+
+#users/id
+def show_with_id
+  user = User.find(params[:id])
+  render json: user
+end
+
 #ba
   def show
     render json: @current_user
