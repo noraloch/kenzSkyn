@@ -38,7 +38,8 @@ end
 #ba
   def update
     @current_user.update(user_params)
-    render json: @current_user
+    user = @current_user
+    render json: {user: UserSerializer.new(user)}
   end
 
   # def create_image
