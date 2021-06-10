@@ -39,9 +39,9 @@ end
   def update
     @current_user.update(user_params)
     user = @current_user
-    render json: {user: UserSerializer.new(user)}
+    render json: user
   end
-
+  # {UserSerializer.new(user)}
   # def create_image
   #     image = Cloudinary::Uploader.upload(params[:image])
   #     user = User.find(params[:id])
@@ -66,7 +66,4 @@ end
     )
   end
 
-  # def find_user
-  #     user = User.find(params[:id])
-  # end
 end
