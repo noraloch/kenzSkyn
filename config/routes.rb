@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post "/login", to: "users#login"
   post "/signup", to: "users#signup"
   get "/ba", to: "users#show"
-  patch "/ba", to: "users#update"
+  patch "/users/:id", to: "users#update"
   get "/users/:id", to: "users#show_with_id"
 
 
